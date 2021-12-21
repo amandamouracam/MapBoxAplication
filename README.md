@@ -1,4 +1,3 @@
-- Versão da API utilizada no APP
 - Modelo de Emulador do Android Utilizado
 - Versão do Kotlin
 - Versão do MAPBOX
