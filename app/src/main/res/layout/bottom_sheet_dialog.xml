@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0">
+
+        <TableRow>
+            <TextView
+                android:text="O que gostaria de fazer?"
+                android:padding="3dip" />
+
+            <!-- Adicionar icone de localizacao !-->
+
+            <TextView
+                android:text=" "
+                android:gravity="right"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow>
+            <View
+                android:id="@+id/rectangle_3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rectangle_3"
+                />
+            <Button
+                android:id="@+id/idbtnVisualizarPin"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:text="Visualizar Pin"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/idbtnAddPin"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:text="Adicionar Pin"
+                android:textAllCaps="false" />
+
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/idBtnDismiss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Ocultar"
+                android:textAllCaps="false" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.cardview.widget.CardView>

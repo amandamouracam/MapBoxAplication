@@ -16,4 +16,140 @@
     mapbox:mapbox_cameraTargetLng="-74.0060"
     mapbox:mapbox_cameraZoom="12"
     mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"
-    />
+    >
+
+    <HorizontalScrollView
+        android:id="@+id/maincard"
+        android:layout_width="412dp"
+        android:layout_height="84dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="532dp"
+        android:background="#00000000"
+        android:text="@string/title"
+        android:textAllCaps="false"
+        />
+    <HorizontalScrollView
+        android:id="@+id/pushcard"
+        android:layout_width="412dp"
+        android:layout_height="84dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="532dp"
+        android:background="@drawable/pushcard"
+        />
+    <View
+        android:id="@+id/mapicon"
+        android:layout_width="33dp"
+        android:layout_height="39.75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="301dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="550.93dp"
+        android:background="#00000000"
+        />
+    <!-- Vector1 -->
+    <View
+        android:id="@+id/vector"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/vector"
+        />
+    <!-- Vector2 -->
+    <View
+        android:id="@+id/vector2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/vector2"
+        />
+    <!-- Vector3 -->
+    <View
+        android:id="@+id/vector3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/vector3"
+        />
+    <!-- Vector4 -->
+    <View
+        android:id="@+id/vector4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/vector4"
+        />
+    <!-- Vector5 -->
+    <View
+        android:id="@+id/vector5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/vector5"
+        />
+    <!-- Icon Expandir -->
+    <View
+        android:id="@+id/icon_expand"
+        android:layout_width="38dp"
+        android:layout_height="4.73dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="161dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="541.46dp"
+        android:background="@drawable/icon_expand"
+        />
+    <!-- Title -->
+
+    <Button
+        android:id="@+id/idBtnDismiss"
+        android:layout_width="269dp"
+        android:layout_height="34.31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="562.76dp"
+        android:text="O que gostaria de fazer? "
+        android:textAllCaps="false" />
+
+    <!-- Pin Mapa -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="269dp"
+        android:layout_height="34.31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="562.76dp"
+        android:gravity="top"
+        android:text="@string/title"
+        android:textAppearance="@style/title" />
+
+    <View
+        android:id="@+id/pin_mapa"
+        android:layout_width="68dp"
+        android:layout_height="63dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="175dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="213dp"
+        android:background="#00000000"
+        />
+
+</com.mapbox.mapboxsdk.maps.MapView>
