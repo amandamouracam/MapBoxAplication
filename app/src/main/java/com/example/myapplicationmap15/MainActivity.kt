@@ -40,11 +40,7 @@ class MainActivity : AppCompatActivity() {
         btnShowBottomSheet.setOnClickListener {
             val dialog = BottomSheetDialog(this)
             val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog, null)
-//            val btnClose = view.findViewById<Button>(R.id.idBtnDismiss)
-//
-//            btnClose.setOnClickListener {
-//                dialog.dismiss()
-//            }
+
 
             val addbtn = view.findViewById<Button>(R.id.idbtnAddPin)
             addbtn.setOnClickListener {
@@ -58,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             dialog.setContentView(view)
             dialog.show()
         }
-        //mapView.onCreate(savedInstanceState)
+
     }
 
 
