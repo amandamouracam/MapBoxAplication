@@ -18,7 +18,7 @@
     mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"
     >
 
-    <HorizontalScrollView
+    <ScrollView
         android:id="@+id/maincard"
         android:layout_width="412dp"
         android:layout_height="84dp"
@@ -29,7 +29,7 @@
         android:text="@string/title"
         android:textAllCaps="false"
         />
-    <HorizontalScrollView
+    <ScrollView
         android:id="@+id/pushcard"
         android:layout_width="412dp"
         android:layout_height="84dp"
@@ -124,7 +124,7 @@
         android:layout_marginLeft="20dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="562.76dp"
-        android:text="O que gostaria de fazer? "
+        android:text="@string/title"
         android:textAllCaps="false" />
 
     <!-- Pin Mapa -->

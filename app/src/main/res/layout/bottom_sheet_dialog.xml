@@ -35,7 +35,7 @@
                 />
             <Button
                 android:id="@+id/idbtnAddPin"
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
                 android:text="Adicionar Pin"
@@ -43,22 +43,9 @@
                 android:background="@drawable/rectangle_3"
                 />
 
-
         </TableRow>
 
-
-
     </TableLayout>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:stretchColumns="1">
-
-
-
-    </TableLayout>
-
 
 
 
