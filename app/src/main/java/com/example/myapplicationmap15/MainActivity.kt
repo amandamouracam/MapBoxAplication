@@ -37,15 +37,18 @@ class MainActivity : AppCompatActivity() {
         mapView = findViewById(R.id.mapView)
         btnShowBottomSheet = findViewById(R.id.idBtnDismiss);
 
+        //função botão título inicial
         btnShowBottomSheet.setOnClickListener {
             val dialog = BottomSheetDialog(this)
             val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog, null)
 
-
+            //função botão adicionar pin
             val addbtn = view.findViewById<Button>(R.id.idbtnAddPin)
             addbtn.setOnClickListener {
 
             }
+
+            //função botão visualizar pin
             val addview = view.findViewById<Button>(R.id.idbtnVisualizarPin)
             addview.setOnClickListener{
 
@@ -55,31 +58,6 @@ class MainActivity : AppCompatActivity() {
             dialog.show()
         }
 
-    }
-
-
-    private fun bitmapFromDrawableRes(context: Context, @DrawableRes resourceId: Int) =
-        convertDrawableToBitmap(AppCompatResources.getDrawable(context, resourceId))
-
-    private fun convertDrawableToBitmap(sourceDrawable: Drawable?): Bitmap? {
-        if (sourceDrawable == null) {
-            return null
-        }
-        return if (sourceDrawable is BitmapDrawable) {
-            sourceDrawable.bitmap
-        } else {
-// copying drawable object to not manipulate on the same reference
-            val constantState = sourceDrawable.constantState ?: return null
-            val drawable = constantState.newDrawable().mutate()
-            val bitmap: Bitmap = Bitmap.createBitmap(
-                drawable.intrinsicWidth, drawable.intrinsicHeight,
-                Bitmap.Config.ARGB_8888
-            )
-            val canvas = Canvas(bitmap)
-            drawable.setBounds(0, 0, canvas.width, canvas.height)
-            drawable.draw(canvas)
-            bitmap
-        }
     }
 
     override fun onStart() {

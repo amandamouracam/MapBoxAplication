@@ -17,7 +17,7 @@
     mapbox:mapbox_cameraZoom="12"
     mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10"
     >
-
+    <!-- Card com título -->
     <ScrollView
         android:id="@+id/maincard"
         android:layout_width="412dp"
@@ -38,6 +38,7 @@
         android:layout_marginTop="532dp"
         android:background="@drawable/pushcard"
         />
+    <!-- Ícone mapa -->
     <View
         android:id="@+id/mapicon"
         android:layout_width="33dp"
@@ -48,7 +49,7 @@
         android:layout_marginTop="550.93dp"
         android:background="#00000000"
         />
-    <!-- Vector1 -->
+    <!-- Vector1 - Ícone mapa -->
     <View
         android:id="@+id/vector"
         android:layout_width="0dp"
@@ -59,7 +60,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/vector"
         />
-    <!-- Vector2 -->
+    <!-- Vector2 - Ícone mapa -->
     <View
         android:id="@+id/vector2"
         android:layout_width="0dp"
@@ -70,7 +71,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/vector2"
         />
-    <!-- Vector3 -->
+    <!-- Vector3 - Ícone mapa -->
     <View
         android:id="@+id/vector3"
         android:layout_width="0dp"
@@ -81,7 +82,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/vector3"
         />
-    <!-- Vector4 -->
+    <!-- Vector4 - Ícone mapa -->
     <View
         android:id="@+id/vector4"
         android:layout_width="0dp"
@@ -92,7 +93,7 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/vector4"
         />
-    <!-- Vector5 -->
+    <!-- Vector5 - Ícone mapa -->
     <View
         android:id="@+id/vector5"
         android:layout_width="0dp"
@@ -114,7 +115,7 @@
         android:layout_marginTop="541.46dp"
         android:background="@drawable/icon_expand"
         />
-    <!-- Title -->
+    <!-- Título -->
 
     <Button
         android:id="@+id/idBtnDismiss"
@@ -127,7 +128,7 @@
         android:text="@string/title"
         android:textAllCaps="false" />
 
-    <!-- Pin Mapa -->
+    <!-- Texto do botão -->
 
     <TextView
         android:id="@+id/title"
@@ -140,6 +141,8 @@
         android:gravity="top"
         android:text="@string/title"
         android:textAppearance="@style/title" />
+
+    <!-- Seta indocadora de rota - pin mapa -->
 
     <View
         android:id="@+id/pin_mapa"
