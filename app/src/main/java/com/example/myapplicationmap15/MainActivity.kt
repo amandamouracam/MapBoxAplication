@@ -30,15 +30,25 @@ class MainActivity : AppCompatActivity() {
         btnShowBottomSheet.setOnClickListener {
             val dialog = BottomSheetDialog(this)
             val view = layoutInflater.inflate(R.layout.bottom_sheet_dialog, null)
-            val btnClose = view.findViewById<Button>(R.id.idBtnDismiss)
+//            val btnClose = view.findViewById<Button>(R.id.idBtnDismiss)
+//
+//            btnClose.setOnClickListener {
+//                dialog.dismiss()
+//            }
 
-            btnClose.setOnClickListener {
-                dialog.dismiss()
+            val addbtn = view.findViewById<Button>(R.id.idbtnAddPin)
+            addbtn.setOnClickListener {
+
+            }
+            val addview = view.findViewById<Button>(R.id.idbtnVisualizarPin)
+            addview.setOnClickListener{
+
             }
             dialog.setCancelable(false)
             dialog.setContentView(view)
             dialog.show()
         }
+
 
 
 

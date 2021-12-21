@@ -7,7 +7,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="0">
+        android:stretchColumns="1">
 
         <TableRow>
             <TextView
@@ -23,45 +23,43 @@
         </TableRow>
 
         <TableRow>
-            <View
-                android:id="@+id/rectangle_3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:background="@drawable/rectangle_3"
-                />
+
             <Button
                 android:id="@+id/idbtnVisualizarPin"
-                android:layout_width="100dp"
+                android:layout_width="90dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
                 android:text="Visualizar Pin"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:background="@drawable/rectangle_3"
+                />
             <Button
                 android:id="@+id/idbtnAddPin"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
                 android:text="Adicionar Pin"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:background="@drawable/rectangle_3"
+                />
+
 
         </TableRow>
 
-        <TableRow>
-            <Button
-                android:id="@+id/idBtnDismiss"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Ocultar"
-                android:textAllCaps="false" />
 
-        </TableRow>
 
     </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+
+
+    </TableLayout>
+
+
 
 
 </androidx.cardview.widget.CardView>
