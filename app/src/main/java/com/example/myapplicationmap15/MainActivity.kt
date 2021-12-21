@@ -13,6 +13,9 @@ import com.mapbox.android.core.location.LocationEnginePriority
 import com.mapbox.android.core.location.LocationEngineProvider
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
+import com.mapbox.geojson.Point
+import com.mapbox.mapboxsdk.annotations.Marker
+import com.mapbox.mapboxsdk.annotations.MarkerOptions
 import com.mapbox.mapboxsdk.camera.CameraUpdateFactory
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.maps.MapboxMap
@@ -21,17 +24,22 @@ import com.mapbox.mapboxsdk.plugins.locationlayer.modes.CameraMode
 import com.mapbox.mapboxsdk.plugins.locationlayer.modes.RenderMode
 
 
-class MainActivity : AppCompatActivity(), PermissionsListener, LocationEngineListener {
+class MainActivity : AppCompatActivity(), PermissionsListener, LocationEngineListener, MapboxMap.OnMapClickListener {
 
     private lateinit var mapView: MapView
     private lateinit var map: MapboxMap
     private lateinit var permissionManager: PermissionsManager
     private lateinit var originLocation: Location
+    private lateinit var originPosition: Point
+    private lateinit var destinationPosition: Point
 
     private var locationEngine : LocationEngine? = null
     private var locationLayerPlugin : LocationLayerPlugin? = null
+    private var destinationMarker: Marker? = null
 
     lateinit var btnShowBottomSheet: Button
+    private lateinit var idbtnAddPin: Button
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,12 +64,14 @@ class MainActivity : AppCompatActivity(), PermissionsListener, LocationEngineLis
             //função botão adicionar pin
             val addbtn = view.findViewById<Button>(R.id.idbtnAddPin)
             addbtn.setOnClickListener {
+                dialog.dismiss()
 
             }
 
             //função botão visualizar pin
             val addview = view.findViewById<Button>(R.id.idbtnVisualizarPin)
             addview.setOnClickListener{
+                dialog.dismiss()
 
             }
             dialog.setCancelable(false)
@@ -141,6 +151,15 @@ class MainActivity : AppCompatActivity(), PermissionsListener, LocationEngineLis
     private fun setCameraPosition(location: Location){
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(
             LatLng(location.latitude, location.longitude), 12.0))
+    }
+
+    override fun onMapClick(point: LatLng) {
+        destinationMarker = map.addMarker(MarkerOptions().position(point))
+        destinationPosition = Point.fromLngLat(point.longitude, point.latitude)
+        originPosition = Point.fromLngLat(originLocation.longitude, originLocation.latitude)
+
+        idbtnAddPin.isEnabled = true
+        idbtnAddPin.setBackgroundResource(R.color.mapbox_blue)
     }
 
     override fun onExplanationNeeded(permissionsToExplain: MutableList<String>?) {

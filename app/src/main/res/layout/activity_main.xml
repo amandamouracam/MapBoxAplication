@@ -142,7 +142,7 @@
         android:text="@string/title"
         android:textAppearance="@style/title" />
 
-    <!-- Seta indocadora de rota - pin mapa -->
+    <!-- Seta indicadora de rota - pin mapa -->
 
     <View
         android:id="@+id/pin_mapa"
